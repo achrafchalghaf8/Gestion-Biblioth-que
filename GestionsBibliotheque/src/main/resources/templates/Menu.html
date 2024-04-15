@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Menu</title>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+	crossorigin="anonymous">
+</head>
+<div class="container">
+	<body style="background-color: rgb(244, 222, 254)">
+		<center>
+<marquee behavior="scroll" direction="left" width="100%">
+	<h1>
+				Menu : Gestion de la librairie Feki
+			</h1>
+			</marquee> <hr></hr>
+
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading"> Trouvez ici tous les livres. <br><br>
+            <a th:href="@{/livre/gerer}" class="btn btn-secondary btn-lg">Les livres</a><br></br>
+          </div>
+        </div>
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading"> Trouvez ici tous les auteurs. <br><br>
+		<a th:href="@{/auteur/gerer}" class="btn btn-secondary btn-lg">Les auteurs</a><br></br>
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading"> Trouvez ici tous les Affectation des auteurs aux livres. <br><br>
+		<a th:href="@{/livre/affectation}" class="btn btn-secondary btn-lg">Les Affectation des auteurs aux livres</a><br></br>
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+        
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading"> Trouvez ici tous les Personnes. <br><br>
+		<a th:href="@{/personne/admin}" class="btn btn-secondary btn-lg" >Les Personnes</a><br></br>
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+			
+		
+		</center>
+	</body>
+</div>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Gestion Auteurs</title>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+	crossorigin="anonymous"> 
+</head>
+<div class="container">
+	<body style="background-color: rgb(251, 224, 254)">
+		<center>
+ 			<marquee behavior="alternate">
+				<h1>Gestion des Auteurs</h1>
+ 			</marquee>
+		</center>
+		<form action="/auteur/menu">
+			<button type="submit" class="btn btn-primary" value="menu">Menu</button>
+		</form>
+		<hr></hr>
+		<br>
+		<div class="row">
+			<div class="col order-first">
+				<form method="get" action="/auteur/add">
+					<div class="form-floating mb-3">
+						<input type="text" class="form-control" id="floatingInput"
+							name="nomPrenom" placeholder="nom et prenom"> <label
+							for="floatingInput">Nom et prénom</label> <br>
+						<button type="submit" class="btn btn-primary" value="Ajouter">Ajouter</button>
+					</div>
+				</form>
+			</div>
+			<div class="col order-last">
+				<table class="table table-hover">
+					<thead>
+						<tr class="table-light">
+							<th class="table-light">ID</th>
+							<th class="table-light">Nom et Prénom</th>
+							<th class="table-light">Nombre de Points</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="table-light" th:each="e:${auteurs}">
+							<td class="table-light" th:utext="${e.id}"></td>
+							<td class="table-light" th:utext="${e.nomPrenom}"></td>
+							<td class="table-light" th:utext="${e.nbrPoints}"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+</div>
+</html>
